@@ -5,47 +5,49 @@
 <title>Math Rush — Privacy Policy</title>
 <style>
 body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;max-width:820px;margin:0 auto;padding:28px 18px;color:#172033}
-h1,h2{color:#18244b}h1{line-height:1.2}a{color:#5b21b6}li{margin:5px 0}.notice{padding:14px 16px;background:#fff4d9;border-left:4px solid #c88700;border-radius:8px}
+h1,h2{color:#18244b}h1{line-height:1.2}a{color:#5b21b6}li{margin:5px 0}
 </style>
 </head>
 <body>
 <h1>Math Rush — Privacy Policy</h1>
-<p><strong>Effective date:</strong> 24 October 2026</p>
+<p><strong>Effective date:</strong> 27 October 2026</p>
 <p><strong>Developer/publisher:</strong> TechStyleKabir</p>
 <p><strong>Privacy and support contact:</strong> <a href="mailto:Kabir201989@gmail.com">Kabir201989@gmail.com</a></p>
 
 <h2>About Math Rush</h2>
-<p>Math Rush is a timed arithmetic game with scores, streaks, hints, sound effects, English/Hindi interface options, and optional cloud score synchronisation. On first launch, the app asks the player to choose the age/audience path that accurately applies to them. The app does not request a date of birth. The child/younger-player path is guest-only and does not offer Google sign-in or cloud score synchronisation. The teen/adult path offers optional Google sign-in.</p>
+<p>Math Rush is a timed arithmetic game with scores, streaks, hints, sound effects and English/Hindi interface options. It does not ask players to select an age group or enter a date of birth. Players can use guest play; Google sign-in and cloud score features may be available in builds that include account functionality. The exact data processed depends on the installed app version and the features the player uses.</p>
 
 <h2>Information stored on the device</h2>
-<p>Math Rush stores the best score, language preference, and selected audience path in local app preferences. The app does not request Android permissions for precise location, contacts, camera, microphone, photos, or files. Guest mode uses local storage and does not require the player to create an account. Local app preferences remain on the device until app data is cleared or the app is uninstalled, except that the in-app account-deletion flow also clears the local best-score preference.</p>
+<p>The app stores gameplay preferences and guest-mode scores locally, such as the best score and language preference. Local data remains on the device until app data is cleared or the app is uninstalled, except where an in-app deletion action also clears relevant local score data. The app does not need Android permissions for precise location, contacts, camera, microphone, photos or files for core gameplay.</p>
 
 <h2>Google sign-in and cloud scores</h2>
-<p>If a player chooses the teen/adult path and signs in with Google, the app uses Firebase Authentication. This can process the Firebase user ID, display name and email address returned by the identity provider, as well as technical request data such as IP address, user-agent strings, and the Firebase Android App ID, as described in Firebase's documentation. Cloud Firestore stores the Firebase user ID as the document key and stores the display name, best score and last-updated timestamp to synchronise the best score.</p>
-<p>Google sign-in is optional. It is not offered in the child/younger-player path. Firebase Authentication and Cloud Firestore process information to provide sign-in and score synchronisation. Firebase's published disclosure states that its Android SDK data is encrypted in transit using HTTPS and may be processed by service providers/subprocessors to provide Firebase services.</p>
+<p>When Google sign-in and cloud-score synchronization are available and used, Google sign-in/Firebase Authentication may process account identifiers, email address and profile information made available by the sign-in provider. Math Rush may store a user-specific Firestore document containing a best score, display name and update timestamp. These services are used for account management and cloud score functionality. Guest-mode scores remain local and do not require an account.</p>
+<p>Firebase and Google may process service-related technical information as described in their own documentation. Signing out stops the app from using the signed-in session but does not itself delete the account or associated cloud data.</p>
 
-<h2>Advertising and consent</h2>
-<p>Math Rush uses the Google Mobile Ads SDK for one interstitial-ad attempt at the end of a game session. The app does not intentionally display banner ads in this version. Google's Mobile Ads SDK disclosure lists data it automatically collects and shares for advertising, measurement, fraud prevention and service operation, including IP address, app/product interactions (such as launches, taps and ad interactions), diagnostic information, and device/account identifiers. An IP address may be used to estimate general location. Review Google's current disclosure for additional detail.</p>
-<p>The app applies a maximum ad content rating of G. In the child/younger-player path, it applies child-directed advertising treatment and the UMP under-age-of-consent signal, disables Google sign-in/cloud score sync, and limits ad content to G. These settings are not a promise that the advertising SDK processes no technical data. Ads are requested only when the Google User Messaging Platform (UMP) SDK indicates that an ad request is permitted.</p>
-<p>UMP is used to refresh consent information on launch, display any consent messages configured by the publisher in AdMob Privacy &amp; messaging, and show a privacy-options form when UMP says one is required. A consent form is not guaranteed to appear in every region or on every launch; this depends on published message configuration and the current consent state.</p>
+<h2>Advertising, consent and technical data</h2>
+<p>Math Rush uses the Google Mobile Ads SDK to request interstitial ads at configured game-session points. The SDK and related services may collect or receive technical information such as IP address, device or advertising identifiers, app interactions, diagnostics and ad interactions for ad delivery, measurement, fraud prevention and service operation. An IP address may be used to estimate general location. The exact data processed depends on SDK versions, settings, consent state and use; consult Google's current disclosures linked below.</p>
+<p>The app applies a maximum ad content rating of G and child-directed/under-age-of-consent treatment where configured for the all-ages experience. These settings do not guarantee that no technical data is processed or that every unsuitable ad category is blocked. The developer must configure AdMob blocking controls, consent messages and Google Play target-audience declarations appropriately. Ads are requested only when the app's consent flow indicates an ad request is permitted.</p>
+<p>The Google User Messaging Platform (UMP) SDK may refresh consent information, show messages configured by the publisher, and present privacy options where required. A consent or privacy-options form may not appear on every launch; availability depends on region, publisher configuration and consent state.</p>
 
 <h2>How information is used</h2>
 <ul>
-<li>To provide gameplay, store local preferences and display the player's best score.</li>
-<li>For players who choose Google sign-in, to authenticate the account and synchronise the best score through Firebase Authentication and Firestore.</li>
-<li>To request and show an interstitial at the natural end of a game session, measure ad delivery and help prevent invalid activity.</li>
-<li>To provide advertising consent and privacy choices where required.</li>
+<li>Provide gameplay, local preferences and score features.</li>
+<li>Authenticate users and synchronize scores to the cloud when those features are enabled and used.</li>
+<li>Request and display interstitial ads, measure ad delivery and help prevent invalid activity.</li>
+<li>Provide advertising consent and privacy choices where required.</li>
+<li>Respond to support and account-deletion requests.</li>
 </ul>
 
 <h2>Account and data deletion</h2>
-<p>Signed-in users can open <strong>Privacy &amp; Account</strong> in Math Rush and choose <strong>Delete account and cloud data</strong>. The app asks the user to re-authenticate the same Google account, deletes that account's Firestore user document, and then deletes the Firebase Authentication account. If re-authentication, network access, or deletion fails, the app reports that deletion did not complete; the user should retry or submit a request through the external deletion page.</p>
-<p>Users who no longer have the app can use the <a href="account-deletion.html">Math Rush account-deletion page</a> to request deletion. The external account-deletion form opens an email draft; it does not send or fulfil a request automatically. The developer must monitor the listed support inbox, verify the request, and delete the matching Firebase Authentication account and Firestore user document. Do not include passwords or authentication tokens in deletion requests. Guest-mode scores and language/audience preferences remain local to the device and can be removed by clearing app storage or uninstalling the app.</p>
+<p>Where account functionality is available, use the in-app <strong>Privacy &amp; Account → Delete account</strong> option and confirm the action to request deletion of the Firebase Authentication account and its associated cloud user/score document. The app must successfully complete the relevant deletion operations for deletion to be complete. If an error appears, do not assume the account or cloud data has been deleted; contact <a href="mailto:Kabir201989@gmail.com">Kabir201989@gmail.com</a> for assistance.</p>
+<p>Users who cannot access the app can use the <a href="account-deletion.html">Math Rush account-deletion page</a> to find instructions and contact the developer. A request sent by email requires the developer to verify the request and complete deletion; opening an email draft does not itself delete data. Do not send passwords, verification codes, access tokens or ID tokens.</p>
+<p>Deletion covers the Firebase Authentication account and the associated Firestore <code>users/{uid}</code> document used by Math Rush. It does not automatically erase local guest data on a device, third-party service logs, or records that a provider must retain for legitimate legal/security reasons. Clear app storage or uninstall the app to remove local guest data.</p>
 
-<h2>Children and audience selection</h2>
-<p>Math Rush provides a neutral first-launch audience choice intended to separate child/younger-player use from the optional Google/Firebase account features. The child/younger-player path uses guest gameplay, child-directed ad treatment, the UMP under-age-of-consent signal, and a G maximum ad content rating. The store's declared target audience must still accurately reflect how the app is designed, marketed and presented. Parents and users should review the third-party policies below for information about SDK processing. The app does not ask for a birth date.</p>
+<h2>Children and all-ages use</h2>
+<p>Math Rush has no age-selection screen and does not request a date of birth. The developer configures advertising treatment and ad content controls for the intended audience, but those technical settings do not by themselves determine the app's legal or Google Play classification. The publisher must make accurate target-audience and Families declarations and comply with applicable child privacy, consent and advertising requirements. Ad category blocking is an additional safeguard, not a guarantee that every unsuitable ad is blocked.</p>
 
 <h2>Retention and security</h2>
-<p>Local best scores, language and audience preferences remain in app storage until removed by the app's clear/delete behaviour, app-data clearing or uninstall. Cloud account/profile data remains in Firebase until the account and associated Firestore document are deleted, subject to technical deletion propagation and any applicable legal/security retention requirements. Google/Firebase and AdMob may retain data under their own published policies. No internet service can be guaranteed completely risk-free; avoid sending passwords or sensitive information in support requests.</p>
+<p>Local preferences and guest scores remain in app storage until cleared or the app is uninstalled. Account and cloud-profile data remains in Firebase until the associated account/document deletion succeeds, subject to technical propagation and applicable legal/security retention requirements. Google, Firebase and advertising providers may retain information under their own policies. No online service can be guaranteed completely risk-free.</p>
 
 <h2>Third-party services and their policies</h2>
 <ul>
@@ -58,6 +60,6 @@ h1,h2{color:#18244b}h1{line-height:1.2}a{color:#5b21b6}li{margin:5px 0}.notice{p
 </ul>
 
 <h2>Policy changes and contact</h2>
-<p>This policy may be updated if app features, SDKs, or legal requirements change. For privacy questions or account-deletion requests, contact <a href="mailto:Kabir201989@gmail.com">Kabir201989@gmail.com</a>.</p>
+<p>This policy may be updated when app features, SDKs or legal requirements change. For privacy questions or account-deletion requests, contact <a href="mailto:Kabir201989@gmail.com">Kabir201989@gmail.com</a>.</p>
 </body>
 </html>
