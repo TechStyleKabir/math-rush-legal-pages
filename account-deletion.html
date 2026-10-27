@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Math Rush — Request Account Deletion</title>
+<title>Math Rush — Account Deletion</title>
 <style>
 body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;max-width:820px;margin:0 auto;padding:28px 18px;color:#172033}
-h1,h2{color:#18244b}a{color:#5b21b6}label{display:block;margin-top:12px;font-weight:600}input,textarea{box-sizing:border-box;width:100%;padding:10px;border:1px solid #bbc4d3;border-radius:8px;font:inherit}button{margin-top:14px;background:#5b21b6;color:white;border:0;border-radius:8px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}.notice{padding:14px 16px;background:#fff4d9;border-left:4px solid #c88700;border-radius:8px}
+h1,h2{color:#18244b}a{color:#5b21b6}label{display:block;margin-top:12px;font-weight:600}input,textarea{box-sizing:border-box;width:100%;padding:10px;border:1px solid #bbc4d3;border-radius:8px;font:inherit}button{margin-top:14px;background:#5b21b6;color:white;border:0;border-radius:8px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}
 </style>
 </head>
 <body>
-<h1>Math Rush — Request Account Deletion</h1>
-<p>You may request deletion of your Math Rush account and associated cloud score without reinstalling the app.</p>
-<h2>What will be deleted?</h2>
+<h1>Math Rush — Account Deletion</h1>
+<p>For accounts in app versions that support sign-in, the primary deletion method is the in-app <strong>Privacy &amp; Account → Delete account</strong> option. Confirm the action in the app to delete the Firebase Authentication account and associated cloud score/profile document.</p>
+<h2>What deletion covers</h2>
 <ul>
 <li>The Firebase Authentication account used to sign in to Math Rush.</li>
-<li>The associated Cloud Firestore <code>users/{uid}</code> document, including display name, best score and update timestamp.</li>
+<li>The associated Cloud Firestore <code>users/{uid}</code> document used by Math Rush, including its score/profile fields.</li>
 </ul>
-<h2>What may remain?</h2>
-<p>Guest-mode best score, language and audience preferences are stored locally on the device. They can be removed by clearing Math Rush app storage or uninstalling the app. The in-app account-deletion action also clears the local best-score preference. Third-party service logs may be retained under their own policies or where legally required.</p>
-<h2>Submit a request</h2>
-<p>Enter the Google account email used for Math Rush. Do not provide a password, verification code, access token, ID token, or other secret.</p>
+<p>Deletion is complete only after the app or developer successfully completes the required deletion operations. If the app displays an error, do not assume the account or cloud data was deleted.</p>
+<h2>If you cannot access the app</h2>
+<p>Use the form below to prepare an email request. Submitting the form opens your email application; it does not automatically send the request or delete data. The developer will verify the request and process deletion of the matching account and associated Math Rush cloud document.</p>
 <form id="deletionForm">
 <label for="accountEmail">Google account email used with Math Rush</label>
 <input id="accountEmail" name="accountEmail" type="email" autocomplete="email" required>
 <label for="details">Optional details (do not include secrets)</label>
-<textarea id="details" name="details" rows="3" placeholder="Optional details that help identify the account"></textarea>
+<textarea id="details" name="details" rows="3" placeholder="Optional details to help identify the account"></textarea>
 <button type="submit">Prepare deletion request email</button>
 </form>
-<p>If the button does not open an email app, send a message manually to <a id="supportLink" href="mailto:Kabir201989@gmail.com">Kabir201989@gmail.com</a> with the subject <strong>Math Rush account deletion</strong> and your Google account email.</p>
-<p>The developer will verify the request and delete the matching Firebase Authentication user and Firestore user document. If the requester still has access to the app, the in-app <strong>Privacy &amp; Account → Delete account and cloud data</strong> flow is available. The developer should not ask for account passwords or authentication tokens.</p>
+<p>If your email application does not open, email <a href="mailto:Kabir201989@gmail.com">Kabir201989@gmail.com</a> with the subject <strong>Math Rush account deletion</strong> and the Google account email used in the app. Never send a password, verification code, access token or ID token.</p>
+<h2>What may remain</h2>
+<p>Guest scores and preferences stored locally on your device are not removed by deleting a cloud account. Clear Math Rush app storage or uninstall the app to remove local data. Google/Firebase and other service providers may retain technical logs under their own policies or where legally required.</p>
 <h2>Privacy and contact</h2>
 <p>Read the <a href="privacy-policy.html">Math Rush Privacy Policy</a>.</p>
 <p>Developer: TechStyleKabir</p>
@@ -37,13 +37,9 @@ h1,h2{color:#18244b}a{color:#5b21b6}label{display:block;margin-top:12px;font-wei
 const supportAddress = "Kabir201989@gmail.com";
 document.getElementById("deletionForm").addEventListener("submit", function(event) {
   event.preventDefault();
-  if (!supportAddress || supportAddress.includes("REPLACE_WITH")) {
-    alert("The Math Rush developer has not configured the support email yet. Please try again later.");
-    return;
-  }
   const email = document.getElementById("accountEmail").value.trim();
   const details = document.getElementById("details").value.trim();
-  const body = "Please delete my Math Rush account and associated cloud score.\n\nGoogle account email: " + email + (details ? "\n\nDetails: " + details : "") + "\n\nI understand I should not send passwords or authentication tokens.";
+  const body = "Please delete my Math Rush account and associated cloud score/profile document.\n\nGoogle account email: " + email + (details ? "\n\nDetails: " + details : "") + "\n\nI understand I should not send passwords or authentication tokens.";
   window.location.href = "mailto:" + supportAddress + "?subject=" + encodeURIComponent("Math Rush account deletion") + "&body=" + encodeURIComponent(body);
 });
 </script>
